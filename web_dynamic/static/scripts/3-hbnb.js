@@ -25,14 +25,13 @@ $.get('http://0.0.0.0:5001/api/v1/status', function (info) {
 
 $.ajax({
   type: 'POST',
-  url: 'http://0.0.0.0:5001/api/v1/places_search/',
+  url: 'http://0.0.0.0:5001/api/v1/places_search',
   dataType: 'json',
   data: '{}',
   contentType: 'application/json; charset=utf-8',
   success: function (places) {
     for (let x = 0; x < places.length; x++) {
-      $('.places').append(
-        `<article>
+      $('.places').append(`<article>
 <div class='title_box'>
 <h2> ${places[x].name}</h2>
 <div class='price_by_night'> ${places[x].price_by_night} </div>
