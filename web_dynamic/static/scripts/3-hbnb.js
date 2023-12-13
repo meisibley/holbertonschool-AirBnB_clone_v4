@@ -25,7 +25,7 @@ $(document).ready(function () {
   
   $.ajax({
     type: 'POST',
-    url: 'http://0.0.0.0:5001/api/v1/places_search',
+    url: 'http://0.0.0.0:5001/api/v1/places_search/',
     dataType: 'json',
     data: '{}',
     contentType: 'application/json; charset=utf-8',
@@ -57,4 +57,3 @@ $(document).ready(function () {
       console.log('error ' + status);
     }
   });
-  
